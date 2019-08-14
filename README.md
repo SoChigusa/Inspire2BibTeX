@@ -33,7 +33,7 @@ http://inspirehep.net/search?p=author%3A[Author name]%20AND%20collection%3Acitea
 Please extract the information `[Author name]` and input as
 
 ``` shell
-./inspire2bibtex [Author name] [Output file]
+./Inspire2BibTeX [Author name] [Output file]
 ```
 
 All the papers of the author will be summarized in the BibTeX format in `[Output file]`.
