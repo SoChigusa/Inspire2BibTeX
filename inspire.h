@@ -41,10 +41,10 @@ void Inspire::split(std::vector<std::string> &v, const std::string &arg_buf, con
   std::string buf = arg_buf;
   auto delim = buf.find(sep);
   while(delim != std::string::npos) {
-    buf.replace(delim, sep.length(), ";");
+    buf.replace(delim, sep.length(), "|");
     delim = buf.find(sep);
   }
-  split(v, buf, ';');
+  split(v, buf, '|');
 }
 
 void Inspire::get() {
