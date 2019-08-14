@@ -64,12 +64,12 @@ void Inspire::get() {
     std::ifstream ifs("hx");
     if(ifs) {
       std::string buf((std::istreambuf_iterator<char>(ifs)), std::istreambuf_iterator<char>());
-      auto p1 = buf.find("<pre>")+5;
+      auto p1 = buf.find("@article");
       auto p2 = buf.find("</pre>");
       std::string bib(buf.substr(p1, p2-p1));
-      std::remove("hx");
       std::cout << bib << std::endl;
-      ofs << bib;
+      ofs << bib << std::endl;
+      std::remove("hx");
     }
   }
   std::remove(url.c_str());
