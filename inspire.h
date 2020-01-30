@@ -14,6 +14,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <unistd.h>
 
 class Inspire {
  private:
@@ -60,6 +61,7 @@ void Inspire::get() {
     if(v[i].find("BibTeX") != std::string::npos) {
       split(vu, v[i], '"');
       system(("wget \""+vu[1]+"\"").c_str());
+      sleep(2);
     }
     std::ifstream ifs("hx");
     if(ifs) {
